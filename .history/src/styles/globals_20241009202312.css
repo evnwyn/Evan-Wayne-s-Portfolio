@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset any default padding or margin */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling if there's any overflow */
+  background-color: transparent; /* Just to ensure no background color is affecting things */
+}
+
+/* Ensure the Next.js root div takes up the full height */
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main container grows to fill the available space */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

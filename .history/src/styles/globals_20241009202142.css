@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #1f78ff; /* Updated to a modern shade of blue */
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Button Styling */
+button {
+  @apply bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #1f60cc; /* Darker shade on hover */
+  transform: scale(1.05); /* Add a subtle scale effect on hover */
+}
+
+/* Global Flex and Full-Height Settings */
+#__next,
+main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive breakpoints for custom font sizes */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
